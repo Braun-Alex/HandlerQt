@@ -1,0 +1,755 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Handler</class>
+ <widget class="QMainWindow" name="Handler">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Конвертор</string>
+  </property>
+  <widget class="QWidget" name="Main_window">
+   <widget class="QPushButton" name="Open">
+    <property name="geometry">
+     <rect>
+      <x>50</x>
+      <y>130</y>
+      <width>301</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>15</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Відкрити файл для зчитування</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="Save">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>190</y>
+      <width>351</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>15</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Обрати директорію для збереження</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="Status">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>60</y>
+      <width>741</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>15</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Статус: нічого не відкрито...</string>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="Option">
+    <property name="geometry">
+     <rect>
+      <x>570</x>
+      <y>50</y>
+      <width>161</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>15</pointsize>
+     </font>
+    </property>
+    <item>
+     <property name="text">
+      <string>SAX</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>DOM</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Algorithms</string>
+     </property>
+    </item>
+   </widget>
+   <widget class="QLabel" name="Description">
+    <property name="geometry">
+     <rect>
+      <x>570</x>
+      <y>10</y>
+      <width>161</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>15</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Метод фільтрації</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="Name">
+    <property name="geometry">
+     <rect>
+      <x>400</x>
+      <y>130</y>
+      <width>61</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>15</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Ім'я</string>
+    </property>
+    <property name="tristate">
+     <bool>false</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="Parameters">
+    <property name="geometry">
+     <rect>
+      <x>540</x>
+      <y>90</y>
+      <width>211</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>15</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Параметри фільтрації</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="Name_value">
+    <property name="geometry">
+     <rect>
+      <x>530</x>
+      <y>130</y>
+      <width>241</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>15</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="Faculty">
+    <property name="geometry">
+     <rect>
+      <x>400</x>
+      <y>180</y>
+      <width>121</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>15</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Факультет</string>
+    </property>
+    <property name="tristate">
+     <bool>false</bool>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="Faculty_value">
+    <property name="geometry">
+     <rect>
+      <x>530</x>
+      <y>180</y>
+      <width>241</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>15</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="Chair">
+    <property name="geometry">
+     <rect>
+      <x>400</x>
+      <y>230</y>
+      <width>121</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>15</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Кафедра</string>
+    </property>
+    <property name="tristate">
+     <bool>false</bool>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="Chair_value">
+    <property name="geometry">
+     <rect>
+      <x>530</x>
+      <y>230</y>
+      <width>241</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>15</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="Specialization">
+    <property name="geometry">
+     <rect>
+      <x>400</x>
+      <y>280</y>
+      <width>141</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>15</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Спеціалізація</string>
+    </property>
+    <property name="tristate">
+     <bool>false</bool>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="Specialization_value">
+    <property name="geometry">
+     <rect>
+      <x>560</x>
+      <y>280</y>
+      <width>211</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>15</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="Form">
+    <property name="geometry">
+     <rect>
+      <x>400</x>
+      <y>330</y>
+      <width>181</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>15</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Форма навчання</string>
+    </property>
+    <property name="tristate">
+     <bool>false</bool>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="Form_value">
+    <property name="geometry">
+     <rect>
+      <x>590</x>
+      <y>330</y>
+      <width>191</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>15</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="Exams_schedule_value">
+    <property name="geometry">
+     <rect>
+      <x>590</x>
+      <y>430</y>
+      <width>191</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>15</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="Exams_schedule">
+    <property name="geometry">
+     <rect>
+      <x>400</x>
+      <y>430</y>
+      <width>181</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>15</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Графік іспитів</string>
+    </property>
+    <property name="tristate">
+     <bool>false</bool>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="Offsets_schedule">
+    <property name="geometry">
+     <rect>
+      <x>400</x>
+      <y>470</y>
+      <width>181</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>15</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Графік заліків</string>
+    </property>
+    <property name="tristate">
+     <bool>false</bool>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="Offsets_schedule_value">
+    <property name="geometry">
+     <rect>
+      <x>590</x>
+      <y>470</y>
+      <width>191</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>15</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="Reporting_form">
+    <property name="geometry">
+     <rect>
+      <x>400</x>
+      <y>510</y>
+      <width>181</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>15</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Звітня форма</string>
+    </property>
+    <property name="tristate">
+     <bool>false</bool>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="Reporting_form_value">
+    <property name="geometry">
+     <rect>
+      <x>590</x>
+      <y>510</y>
+      <width>191</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>15</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="Reporting_schedule_value">
+    <property name="geometry">
+     <rect>
+      <x>590</x>
+      <y>550</y>
+      <width>191</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>15</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="Reporting_schedule">
+    <property name="geometry">
+     <rect>
+      <x>400</x>
+      <y>550</y>
+      <width>181</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>15</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Звітний графік</string>
+    </property>
+    <property name="tristate">
+     <bool>false</bool>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="Studying_begin">
+    <property name="geometry">
+     <rect>
+      <x>400</x>
+      <y>380</y>
+      <width>191</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>15</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Початок навчання</string>
+    </property>
+    <property name="tristate">
+     <bool>false</bool>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="Studying_begin_value">
+    <property name="geometry">
+     <rect>
+      <x>610</x>
+      <y>380</y>
+      <width>191</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>15</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+  </widget>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>Open</sender>
+   <signal>released()</signal>
+   <receiver>Handler</receiver>
+   <slot>OpenXMLFile()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>210</x>
+     <y>240</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>399</x>
+     <y>299</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>Save</sender>
+   <signal>released()</signal>
+   <receiver>Handler</receiver>
+   <slot>SaveHTMLFile()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>205</x>
+     <y>360</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>399</x>
+     <y>299</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>Option</sender>
+   <signal>currentTextChanged(QString)</signal>
+   <receiver>Handler</receiver>
+   <slot>ChangeFilter()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>590</x>
+     <y>75</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>399</x>
+     <y>299</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>Name</sender>
+   <signal>stateChanged(int)</signal>
+   <receiver>Handler</receiver>
+   <slot>ChangeNameOption()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>430</x>
+     <y>140</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>399</x>
+     <y>299</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>Faculty</sender>
+   <signal>stateChanged(int)</signal>
+   <receiver>Handler</receiver>
+   <slot>ChangeFacultyOption()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>460</x>
+     <y>195</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>399</x>
+     <y>299</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>Chair</sender>
+   <signal>stateChanged(int)</signal>
+   <receiver>Handler</receiver>
+   <slot>ChangeChairOption()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>460</x>
+     <y>245</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>399</x>
+     <y>299</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>Specialization</sender>
+   <signal>stateChanged(int)</signal>
+   <receiver>Handler</receiver>
+   <slot>ChangeSpecializationOption()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>470</x>
+     <y>295</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>399</x>
+     <y>299</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>Studying_begin</sender>
+   <signal>stateChanged(int)</signal>
+   <receiver>Handler</receiver>
+   <slot>ChangeStudyingBeginOption()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>495</x>
+     <y>395</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>399</x>
+     <y>299</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>Exams_schedule</sender>
+   <signal>stateChanged(int)</signal>
+   <receiver>Handler</receiver>
+   <slot>ChangeExamsScheduleOption()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>490</x>
+     <y>445</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>399</x>
+     <y>299</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>Offsets_schedule</sender>
+   <signal>stateChanged(int)</signal>
+   <receiver>Handler</receiver>
+   <slot>ChangeOffsetsScheduleOption()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>490</x>
+     <y>485</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>399</x>
+     <y>299</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>Reporting_form</sender>
+   <signal>stateChanged(int)</signal>
+   <receiver>Handler</receiver>
+   <slot>ChangeReportingFormOption()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>490</x>
+     <y>525</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>399</x>
+     <y>299</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>Reporting_schedule</sender>
+   <signal>stateChanged(int)</signal>
+   <receiver>Handler</receiver>
+   <slot>ChangeReportingScheduleOption()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>490</x>
+     <y>565</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>399</x>
+     <y>299</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>Form</sender>
+   <signal>stateChanged(int)</signal>
+   <receiver>Handler</receiver>
+   <slot>ChangeFormOption()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>490</x>
+     <y>345</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>399</x>
+     <y>299</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>OpenXMLFile()</slot>
+  <slot>SaveHTMLFile()</slot>
+  <slot>ChangeFilter()</slot>
+  <slot>ChangeNameOption()</slot>
+  <slot>ChangeFacultyOption()</slot>
+  <slot>ChangeChairOption()</slot>
+  <slot>ChangeSpecializationOption()</slot>
+  <slot>ChangeFormOption()</slot>
+  <slot>ChangeStudyingBeginOption()</slot>
+  <slot>ChangeExamsScheduleOption()</slot>
+  <slot>ChangeOffsetsScheduleOption()</slot>
+  <slot>ChangeReportingFormOption()</slot>
+  <slot>ChangeReportingScheduleOption()</slot>
+ </slots>
+</ui>
