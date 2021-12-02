@@ -104,7 +104,7 @@ private:
                                    "schedule_of_offsets",
                                    "forms_of_reporting",
                                    "schedule_of_reporting"};
-    std::array<QString,10> the_headers={"Ім'я і прізвище","Факультет",
+    std::array<QString,10> the_headers={"П.І.Б.","Факультет",
                                       "Кафедра","Фах",
                                       "Форма навчання",
                                       "Початок навчання",
